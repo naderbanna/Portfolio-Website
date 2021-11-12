@@ -12,6 +12,7 @@
   "author": "Nader Banna<naderbanna2@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@chakra-ui/icons": "^1.1.0",
     "@chakra-ui/react": "^1.7.0",
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
