@@ -5,11 +5,13 @@ import {
     Heading, 
     Image,  
     Button, 
+    Flex,
     useColorModeValue } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
 
 import Section from '../components/section'
+import MBox from '../components/MBox'
 
 const Page = () => {
     return(
@@ -74,20 +76,42 @@ const Page = () => {
                 Computer Science education and 4+ years of experience in product development.
                 </Paragraph>
                 
-                <Box align="center" my={4}>
+                {/* <Box align="center" my={4}>
                     <NextLink href="/works">
                         <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
                             My portfolio
                         </Button>
                     </NextLink>
-                </Box>
+                </Box> */}
+                
+                
+
+
             </Section>
 
+            
+                    {/* <MBox delay={2} >
+                    <NextLink href="/works">
+                            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+                                My portfolio
+                            </Button>
+                        </NextLink>
+                    </MBox> */}
 
+                    <Box align="center">
+                        <MBox delay={1}>
+                            My portfolio
+                        </MBox>
+                    </Box>
+                        
+                   
+
+
+                
 
             <Box >
-                <Box >
-                    <Heading as="h2" size="sm" align="center">
+                <Box>
+                    <Heading as="h2" size="sm" align="center" mt={5}>
                         Song of the day
                     </Heading>
                 </Box>

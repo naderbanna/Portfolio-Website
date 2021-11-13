@@ -8,7 +8,7 @@ const LogoBox = styled.span`
   font-size: 24px;
   display: inline-flex;
   align-items: center;
-  height: 30px;
+  height: 38px;
   line-height: 20px;
   padding: 10px;
 
@@ -22,22 +22,23 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-  const footPrintImg = `/images/web-programming${useColorModeValue('', '-dark')}.png`
+  const footPrintImg = `/images/logo${useColorModeValue('', '-dark')}.png`
 
   return (
-    <Link href="/">
+    <Link href="/" >
       <a>
         <LogoBox>
-          <Image src={footPrintImg} width={24} height={24} alt="logo" />
-          <Text
+          <Image src={footPrintImg} width={30} height={30} alt="logo" />
+          {/* <Text
             color={useColorModeValue('gray.800', 'whiteAlpha.900')}
             fontFamily='M PLUS Rounded 1c", sans-serif'
             fontWeight="bold"
             ml={3}
             pl={5}
+            
           >
-            Nader Banna
-          </Text>
+            
+          </Text> */}
         </LogoBox>
       </a>
     </Link>

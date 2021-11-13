@@ -5,7 +5,7 @@ const ThemeToggleButton = () => {
     const { toggleColorMode } = useColorMode()
 
     return (
-        <IconButton aria-label="Toggle theme"
+        <IconButton aria-label="Toggle theme" size="sm" m={1}
             colorScheme={useColorModeValue('purple', 'orange')}
             icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
             onClick={toggleColorMode}

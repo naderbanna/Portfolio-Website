@@ -16,18 +16,19 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button.js'
+import { IoLogoGithub } from 'react-icons/io5'
 
-const LinkItem = ({ href, path, children}) => {
+const LinkItem = ({ href, path, _target, children, ...props}) => {
     const active = path === href
     const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
     return (
-        <NextLink href={href} >
+        <NextLink href={href} passHref>
             <Link 
             p={2} 
             bg={active ? 'glassTeal' : undefined}
             color={active ? '#202023' : inactiveColor}
-            // _target={_target}
-            // {...props}
+            target={_target}
+            {...props}
             >
                 {children}
             </Link>
@@ -50,7 +51,7 @@ const Navbar = props => {
       >
         <Container
           display="flex"
-          p={2}
+          p={1}
           maxW="container.md"
           wrap="wrap"
           align="center"
@@ -76,7 +77,7 @@ const Navbar = props => {
             <LinkItem href="/posts" path={path}>
               Posts
             </LinkItem>
-            {/* <LinkItem
+            <LinkItem
               _target="_blank"
               href="https://github.com/naderbanna/Portfolio-Website"
               path={path}
@@ -87,7 +88,7 @@ const Navbar = props => {
             >
             <IoLogoGithub />
               Source
-            </LinkItem> */}
+            </LinkItem>
           </Stack>
   
           <Box flex={1} align="right">
